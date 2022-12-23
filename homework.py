@@ -30,8 +30,10 @@ HOMEWORK_VERDICTS = {
 
 
 def check_tokens():
-    """Проверяет доступность переменных окружения.
-    Если все доступно, вернет - True"""
+    """
+    Проверяет доступность переменных окружения.
+    Если все доступно, вернет - True
+    """
     logging.info('Проверка всех токенов')
     if all([PRACTICUM_TOKEN, TELEGRAM_TOKEN, TELEGRAM_CHAT_ID]):
         return True
@@ -68,7 +70,7 @@ def get_api_answer(current_timestamp):
 
 
 def check_response(response):
-    """Проверяет ответ API на соответствие документации"""
+    """Проверяет ответ API на соответствие документации."""
     logging.info('Проверка API')
     if not isinstance(response, dict):
         info = 'Ответ API не является dict'
@@ -89,8 +91,10 @@ def check_response(response):
 
 
 def parse_status(homework):
-    """Извлекает из информации о конкретной
-    домашней работе статус этой работы."""
+    """
+    Извлекает из информации о конкретной
+    домашней работе статус этой работы.
+    """
     logging.info('Проводим проверки информации о работе')
     homework_name = homework.get('homework_name')
     homework_verdict = homework.get('status')

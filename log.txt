@@ -20,3 +20,12 @@
 2022-12-22 15:38:53,343, DEBUG, {'text': 'Нет новых статусов', 'caption_entities': [], 'photo': [], 'group_chat_created': False, 'chat': {'type': 'private', 'first_name': 'JoJo', 'id': 139551163, 'username': 'sammytmg', 'last_name': 'S.T.M.G.'}, 'new_chat_photo': [], 'delete_chat_photo': False, 'supergroup_chat_created': False, 'new_chat_members': [], 'date': 1671712733, 'channel_chat_created': False, 'message_id': 4, 'entities': [], 'from': {'first_name': 'HomeWork_tmg', 'id': 5853911355, 'username': 'homework_tmg_bot', 'is_bot': True}}
 2022-12-22 15:38:53,344, DEBUG, Exiting: send_message
 2022-12-22 15:38:53,344, DEBUG, Сообщение отправлено Нет новых статусов
+2022-12-23 12:13:16,082, INFO, Проверка всех токенов
+2022-12-23 12:13:16,084, INFO, Отправка запроса с параметрами
+2022-12-23 12:13:16,164, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2022-12-23 12:13:16,497, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1671786796 HTTP/1.1" 200 42
+2022-12-23 12:13:16,504, INFO, Проверка API
+2022-12-23 12:13:16,504, DEBUG, Entering: send_message
+2022-12-23 12:13:16,943, DEBUG, {'date': 1671786796, 'entities': [], 'message_id': 5, 'text': 'Нет новых статусов', 'chat': {'id': 139551163, 'first_name': 'JoJo', 'username': 'sammytmg', 'last_name': 'S.T.M.G.', 'type': 'private'}, 'group_chat_created': False, 'new_chat_photo': [], 'supergroup_chat_created': False, 'photo': [], 'channel_chat_created': False, 'new_chat_members': [], 'delete_chat_photo': False, 'caption_entities': [], 'from': {'id': 5853911355, 'is_bot': True, 'first_name': 'HomeWork_tmg', 'username': 'homework_tmg_bot'}}
+2022-12-23 12:13:16,944, DEBUG, Exiting: send_message
+2022-12-23 12:13:16,944, DEBUG, Сообщение отправлено Нет новых статусов
