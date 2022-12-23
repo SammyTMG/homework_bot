@@ -1,0 +1,22 @@
+2022-12-22 15:28:21,804, INFO, Проверка всех токенов
+2022-12-22 15:28:21,804, INFO, Отправка запроса с параметрами
+2022-12-22 15:28:22,210, INFO, Проверка API
+2022-12-22 15:38:03,165, INFO, Проверка всех токенов
+2022-12-22 15:38:03,166, INFO, Отправка запроса с параметрами
+2022-12-22 15:38:03,249, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2022-12-22 15:38:03,630, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=0 HTTP/1.1" 200 None
+2022-12-22 15:38:03,636, INFO, Проверка API
+2022-12-22 15:38:03,636, INFO, Проводим проверки информации о работе
+2022-12-22 15:38:03,636, DEBUG, Entering: send_message
+2022-12-22 15:38:04,136, DEBUG, {'entities': [], 'photo': [], 'new_chat_photo': [], 'message_id': 3, 'text': 'Изменился статус проверки работы "SammyTMG__hw05_final.zip". Работа проверена: ревьюеру всё понравилось. Ура!', 'supergroup_chat_created': False, 'group_chat_created': False, 'date': 1671712684, 'channel_chat_created': False, 'new_chat_members': [], 'delete_chat_photo': False, 'chat': {'last_name': 'S.T.M.G.', 'id': 139551163, 'username': 'sammytmg', 'first_name': 'JoJo', 'type': 'private'}, 'caption_entities': [], 'from': {'id': 5853911355, 'is_bot': True, 'first_name': 'HomeWork_tmg', 'username': 'homework_tmg_bot'}}
+2022-12-22 15:38:04,154, DEBUG, Exiting: send_message
+2022-12-22 15:38:04,154, DEBUG, Сообщение отправлено Изменился статус проверки работы "SammyTMG__hw05_final.zip". Работа проверена: ревьюеру всё понравилось. Ура!
+2022-12-22 15:38:50,379, INFO, Проверка всех токенов
+2022-12-22 15:38:50,380, INFO, Отправка запроса с параметрами
+2022-12-22 15:38:50,398, DEBUG, Starting new HTTPS connection (1): practicum.yandex.ru:443
+2022-12-22 15:38:52,972, DEBUG, https://practicum.yandex.ru:443 "GET /api/user_api/homework_statuses/?from_date=1671712730 HTTP/1.1" 200 42
+2022-12-22 15:38:52,978, INFO, Проверка API
+2022-12-22 15:38:52,978, DEBUG, Entering: send_message
+2022-12-22 15:38:53,343, DEBUG, {'text': 'Нет новых статусов', 'caption_entities': [], 'photo': [], 'group_chat_created': False, 'chat': {'type': 'private', 'first_name': 'JoJo', 'id': 139551163, 'username': 'sammytmg', 'last_name': 'S.T.M.G.'}, 'new_chat_photo': [], 'delete_chat_photo': False, 'supergroup_chat_created': False, 'new_chat_members': [], 'date': 1671712733, 'channel_chat_created': False, 'message_id': 4, 'entities': [], 'from': {'first_name': 'HomeWork_tmg', 'id': 5853911355, 'username': 'homework_tmg_bot', 'is_bot': True}}
+2022-12-22 15:38:53,344, DEBUG, Exiting: send_message
+2022-12-22 15:38:53,344, DEBUG, Сообщение отправлено Нет новых статусов
