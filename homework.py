@@ -134,12 +134,10 @@ def main():
     while True:
         try:
             response = get_api_answer(current_timestamp)
-            logging.info(response)
             current_timestamp = response.get(
                 'current_date', int(time.time())
             )
             homeworks = check_response(response)
-            logging.info(homeworks)
             if homeworks:
                 message = parse_status(homeworks[0])
             else:
