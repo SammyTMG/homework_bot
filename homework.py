@@ -12,6 +12,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+logging.basicConfig(
+    level=logging.DEBUG,
+    format=('%(asctime)s, %(levelname)s, %(message)s'),
+    handlers=[logging.FileHandler('log.txt', encoding='UTF-8'),
+              logging.StreamHandler(sys.stdout)])
 
 PRACTICUM_TOKEN = os.getenv('PRACTICUM_TOKEN')
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
@@ -66,6 +71,7 @@ def get_api_answer(current_timestamp):
             raise ENDPOINTError(response.status_code)
         return response.json()
     except Exception as error:
+        logging.error(error)
         raise ENDPOINTError(error)
 
 
@@ -91,8 +97,8 @@ def check_response(response):
 
 
 def parse_status(homework):
-    """Извлекает из инфы о домашней работе статус этой работы."""
-    logging.info('Проводим проверки информации о работе')
+    """ Извлекает из инфы о домашней работе статус этой работы."""
+    logging.debug('Проводим проверки информации о работе')
     homework_name = homework.get('homework_name')
     homework_verdict = homework.get('status')
 
@@ -128,10 +134,12 @@ def main():
     while True:
         try:
             response = get_api_answer(current_timestamp)
+            logging.info(response)
             current_timestamp = response.get(
                 'current_date', int(time.time())
             )
             homeworks = check_response(response)
+            logging.info(homeworks)
             if homeworks:
                 message = parse_status(homeworks[0])
             else:
@@ -154,11 +162,4 @@ def main():
 
 
 if __name__ == '__main__':
-    logging.basicConfig(
-        level=logging.DEBUG,
-        format=(
-            '%(asctime)s, %(levelname)s, %(message)s'
-        ),
-        handlers=[logging.FileHandler('log.txt', encoding='UTF-8'),
-                  logging.StreamHandler(sys.stdout)])
     main()
